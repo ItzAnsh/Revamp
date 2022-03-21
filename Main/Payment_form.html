@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- CSS only -->
+		<!-- CSS only -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<style>
+			body {
+				background-color: whitesmoke;
+			}
+
+			@font-face {
+				font-family: CC;
+				src: url(../Fonts/CREDIT_CARD/CREDC___.ttf);
+			}
+
+			.a {
+				position: absolute;
+				margin: 4%;
+				margin-top: 0%;
+			}
+
+			.b {
+				background-color: rgba(207, 203, 203, 0.952);
+			}
+
+			.c {
+				width: 50%;
+				border: none;
+				color: rgb(255, 193, 7);
+				background-color: black;
+			}
+
+			.c:hover {
+				background-color: rgb(255, 193, 7);
+				color: white;
+				transition: color 0.8s;
+				transition: background-color 0.5s;
+			}
+
+			.d {
+				color: blueviolet;
+			}
+
+			.e {
+				border: none;
+			}
+
+			.button {
+				border-radius: 20px;
+				padding: 20px;
+			}
+
+			.f {
+				border: 0;
+				width: 50%;
+				background-color: black;
+				color: rgb(255, 193, 7);
+			}
+
+			.fa-credit-card {
+				color: rgb(255, 193, 7);
+			}
+
+			.f:hover {
+				background-color: #253b80;
+				color: #2997d8;
+				transition: color 0.5s;
+				transition: background-color 0.8s;
+			}
+
+			.g {
+				border: none;
+				width: 50%;
+				background-color: black;
+				color: rgb(255, 193, 7);
+			}
+
+			.g:hover {
+				background-color: rgba(125, 182, 39, 0.781);
+				color: white;
+				transition: color 0.5s;
+				transition: background-color 0.8s;
+			}
+
+			.h {
+				position: absolute;
+				margin: 4%;
+				margin-top: 0%;
+				visibility: hidden;
+			}
+
+			.i {
+				letter-spacing: 4px;
+			}
+
+			.j {
+				border: none;
+				width: 50%;
+				background-color: black;
+				color: rgb(255, 193, 7);
+			}
+
+			.j:hover {
+				background-color: #c3073f;
+				color: white;
+				transition: color 0.5s;
+				transition: background-color 0.8s;
+			}
+
+			.button:hover {
+				background-color: blueviolet;
+				color: white;
+				transition: color 0.5s;
+				transition: background-color 0.8s;
+			}
+
+			.pay {
+				color: #2997d8;
+			}
+
+			#paypal {
+				visibility: hidden;
+				position: absolute;
+				margin-left: 5%;
+			}
+
+			label {
+				cursor: pointer;
+			}
+
+			table {
+				line-height: 50px;
+			}
+
+			#Net {
+				visibility: hidden;
+			}
+
+			.ccd {
+				background: #111;
+				height: 300px;
+				width: 500px;
+				border-radius: 40px;
+				display: inline-block;
+			}
+
+			.ccfont {
+				font-size: 40px;
+				font-family: CC;
+				width: 400px;
+			}
+
+			.ccnum {
+				border-radius: 10px;
+			}
+
+			.ccname {
+				font-size: 13px;
+			}
+
+			.cclname {
+				display: inline;
+			}
+
+			#ccname {
+				font-size: 21px;
+			}
+
+			.ccexp {
+				font-size: 13px;
+			}
+
+			#ccexp {
+				font-size: 18px;
+			}
+
+			.zzz {
+				color: rgba(127, 2, 243, 0.664);
+			}
+
+			@keyframes opac {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body class="">
+		<h1 class="display-1 text-center d">Payment Form</h1>
+		<div class="btn-group m-5 container">
+			<button class="btn button btn-lg" onclick="vis1()">
+				<i class="fab fa-cc-visa"></i> Credit Card
+			</button>
+			<button class="btn button btn-lg" onclick="vis2()">
+				<i class="fab fa-paypal"></i> PayPal
+			</button>
+			<button class="btn button btn-lg" onclick="vis3()">
+				<i class="fas fa-globe"></i> Net Banking
+			</button>
+			<button class="btn button btn-md" onclick="vis4()">
+				<i class="fas fa-dollar-sign"></i> Cashapp
+			</button>
+			<button class="btn button btn-md" onclick="vis5()">
+				<i class="fab fa-ethereum"></i> Crypto Currency
+			</button>
+		</div>
+		<div class="bg-light container shadow-lg rounded p-4 a" id="cc">
+			<div class="row">
+				<div class="col-lg-5">
+					<i class="fas fa-credit-card fa-4x ms-5"></i>
+				</div>
+				<div class="col-md-4">
+					<div class="ccd text-light ps-4 pt-4">
+						<p class="text-end text-light me-3">
+							<i class="fab fa-cc-mastercard fa-4x"></i>
+						</p>
+						<div class="p-3 ccfont text-center" id="ccd">
+							<p class="text-light bg-dark ccnum" id="ccnum">
+								XXXX&emsp;&emsp;&emsp;&emsp;XXXX&emsp;&emsp;&emsp;&emsp;XXXX
+							</p>
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-3">
+										<p class="text-light ccname text-start">NAME</p>
+										<p id="ccfname"></p>
+										<span id="cclname"></span>
+									</div>
+									<div class="col-lg-9 text-end">
+										<p class="text-light ccexp">EXP DATE</p>
+										<p id="ccexp">00/00</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<form action="" method="post" name="google-sheet">
+					<table class="table text-center">
+						<tr>
+							<td>
+								<label for="Fname" class="">Full Name</label>
+							</td>
+							<td>
+								<input
+									type="text"
+									name="Name"
+									id="Fname"
+									class="shadow-lg rounded p-1 ps-4 container e"
+									placeholder="Ansh"
+									onclick="ccfname()"
+									oninput="ccfname(this.value)"
+									onchange="ccfname(this.value)"
+									required
+								/>
+							</td>
+						</tr>
+						<br />
+						<tr>
+							<td>
+								<label for="CC">Credit Card</label>
+							</td>
+							<td>
+								<input
+									type="number"
+									name="card-number"
+									id="CC"
+									class="rounded shadow-lg container p-1 ps-4 e"
+									placeholder="1234-5678-9012"
+									onclick="ccd()"
+									oninput="ccd(this.value)"
+									onchange="ccd(this.value)"
+									required
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="CVV">CVV</label></td>
+							<td>
+								<input
+									type="number"
+									name="CVV"
+									id="CVV"
+									class="rounded shadow-lg container p-1 ps-4 e"
+									placeholder="123"
+									aria-valuemax="12"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="Exp">Expiration Date</label></td>
+							<td>
+								<input
+									type="date"
+									name="Exp"
+									id="Exp"
+									class="rounded shadow-lg container p-1 ps-4 e"
+									onclick="ccexp()"
+									oninput="ccexp(this.value)"
+									onchange="ccexp(this.value)"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="PS">Postal Code</label></td>
+							<td>
+								<input
+									type="number"
+									name="PS"
+									id="PS"
+									class="rounded shadow-lg container p-1 ps-4 e"
+									placeholder="160047"
+								/>
+							</td>
+						</tr>
+					</table>
+					<div class="text-center">
+						<input
+							name="payment"
+							type="submit"
+							value="Pay Now!"
+							class="fw-bold p-3 rounded-pill c shadow-lg"
+						/>
+					</div>
+					<br />
+				</form>
+			</div>
+		</div>
+		<div class="bg-light container shadow-lg rounded p-4 z" id="paypal">
+			<div class="row">
+				<form action="" method="post">
+					<i class="fab fa-cc-paypal fa-4x pay ms-5"></i>
+					<table class="table text-center">
+						<tr>
+							<td>Full name</td>
+							<td>
+								<input
+									type="text"
+									name=""
+									id=""
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="Ansh Bhasin"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td>
+								<input
+									type="email"
+									name=""
+									id=""
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="ansh2018.be21@chitkara.edu.in"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td>
+								<input
+									type="password"
+									name=""
+									id=""
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="Fill 8 letters including numbers, uppercase, lowercase and no symbols"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input
+									type="submit"
+									value="Pay Now!"
+									class="fw-bold p-3 rounded-pill f shadow-lg"
+								/>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div class="bg-light container shadow-lg rounded p-4 h" id="Net">
+			<i class="fas fa-receipt fa-4x ms-5"></i>
+			<div class="row">
+				<form action="" method="post">
+					<table class="table text-center">
+						<tr>
+							<td><label for="fname2">First Name</label></td>
+							<td>
+								<input
+									type="text"
+									name=""
+									id="fname2"
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="Ansh"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="lname2">Last Name</label></td>
+							<td>
+								<input
+									type="text"
+									name="lname2"
+									id="lname2"
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="Bhasin"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="Acc">Account Number</label></td>
+							<td>
+								<input
+									type="number"
+									name="Acc"
+									id="Acc"
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="1234567890"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="">PIN</label></td>
+							<td>
+								<input
+									type="number"
+									name="pin"
+									id="pin"
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="1234"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input
+									type="submit"
+									value="Pay Now!"
+									class="fw-bold p-3 rounded-pill shadow-lg g"
+								/>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div class="bg-light container shadow-lg rounded p-4 h" id="Cashapp">
+			<i class="fas fa-dollar-sign fa-4x text-success ms-5"></i>
+			<div class="row">
+				<form action="" method="post">
+					<table class="table text-center">
+						<tr>
+							<td>
+								<label for="Number">Phone Number</label>
+							</td>
+							<td>
+								<input
+									type="number"
+									name=""
+									id=""
+									class="rounded container ps-4 shadow-lg e i"
+									placeholder="1234567890"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input
+									type="submit"
+									value="Pay Now!"
+									class="fw-bold p-3 rounded-pill shadow-lg j"
+								/>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div
+			class="bg-light container shadow-lg rounded p-4 h text-center"
+			id="Crypto"
+		>
+			<i class="fab fa-bitcoin fa-4x text-warning ms-5 mb-5"></i>
+			<div class="row">
+				<form action="" method="post">
+					<table class="table text-center">
+						<tr>
+							<td>
+								<label for="Bit">BCH Address </label>
+							</td>
+							<td>
+								<input
+									type="text"
+									name=""
+									id=""
+									class="rounded container ps-4 shadow-lg e i"
+									placeholder="187ANuI90Y8bOiP012NML545"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="text-center container-fluid">
+								<input
+									type="submit"
+									value="Pay Now!"
+									class="fw-bold p-3 rounded-pill shadow-lg j"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td class="text-left" colspan="2">
+								<i
+									class="fab fa-ethereum fa-4x text-danger text-left mt-4 mb-5"
+								></i>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="ETH">ETH Address</label></td>
+							<td>
+								<input
+									type="text"
+									name=""
+									id=""
+									class="rounded container ps-4 shadow-lg e i"
+									placeholder="0x4912969d5Bd5142c49DBFc7a04F5FD3c77Fb97cd"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="text-center container-fluid">
+								<input
+									type="submit"
+									value="Pay Now!"
+									class="fw-bold p-3 rounded-pill shadow-lg j"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="text-center">
+								<i class="far fa-dot-circle fa-4x mt-4 mb-5 zzz"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="Sol">Sol Address:</label>
+							</td>
+							<td>
+								<input
+									type="text"
+									name=""
+									id=""
+									class="rounded container ps-4 shadow-lg e i"
+									placeholder="045Xc9PoE3WrT4U8I0N2jh7sa67f"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="text-center container-fluid">
+								<input
+									type="submit"
+									value="Pay Now!"
+									class="fw-bold p-3 rounded-pill shadow-lg j"
+								/>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<script>
+			const scriptURL =
+				"https://script.google.com/macros/s/AKfycbzO5x6buOCXHxo0YZW1KWp-EuZ0hanXzzZR4JvE3qSUfLbCOlMk92iqUcbl6x5ifS1ZoQ/exec";
+			const form = document.forms["google-sheet"];
+
+			form.addEventListener("submit", (e) => {
+				e.preventDefault();
+				fetch(scriptURL, { method: "POST", body: new FormData(form) })
+					.then((response) => alert("Thank You!"))
+					.catch((error) => console.error("Error!", error.message));
+			});
+		</script>
+		<script>
+			function vis1() {
+				var d = document.getElementById("cc");
+				var e = document.getElementById("paypal");
+				var f = document.getElementById("Net");
+				var g = document.getElementById("Cashapp");
+				var h = document.getElementById("Crypto");
+				h.style.visibility = "hidden";
+				g.style.visibility = "hidden";
+				d.style.visibility = "visible";
+				d.style.animation = "opac 1s";
+				e.style.visibility = "hidden";
+				f.style.visibility = "hidden";
+			}
+			function vis2() {
+				var e = document.getElementById("paypal");
+				var d = document.getElementById("cc");
+				var f = document.getElementById("Net");
+				var g = document.getElementById("Cashapp");
+				var h = document.getElementById("Crypto");
+				h.style.visibility = "hidden";
+				g.style.visibility = "hidden";
+				e.style.visibility = "visible";
+				e.style.animation = "opac 1s";
+				d.style.visibility = "hidden";
+				f.style.visibility = "hidden";
+			}
+			function vis3() {
+				var f = document.getElementById("Net");
+				var d = document.getElementById("paypal");
+				var e = document.getElementById("cc");
+				var g = document.getElementById("Cashapp");
+				var h = document.getElementById("Crypto");
+				h.style.visibility = "hidden";
+				g.style.visibility = "hidden";
+				f.style.visibility = "visible";
+				f.style.animation = "opac 1s";
+				d.style.visibility = "hidden";
+				e.style.visibility = "hidden";
+			}
+
+			function vis4() {
+				var g = document.getElementById("Cashapp");
+				var f = document.getElementById("Net");
+				var d = document.getElementById("paypal");
+				var e = document.getElementById("cc");
+				var h = document.getElementById("Crypto");
+				h.style.visibility = "hidden";
+				f.style.visibility = "hidden";
+				g.style.visibility = "visible";
+				g.style.animation = "opac 1s";
+				d.style.visibility = "hidden";
+				e.style.visibility = "hidden";
+			}
+
+			function vis5() {
+				var g = document.getElementById("Cashapp");
+				var f = document.getElementById("Net");
+				var d = document.getElementById("paypal");
+				var e = document.getElementById("cc");
+				var h = document.getElementById("Crypto");
+				h.style.visibility = "visible";
+				h.style.animation = "opac 1s";
+				f.style.visibility = "hidden";
+				g.style.visibility = "hidden";
+				d.style.visibility = "hidden";
+				e.style.visibility = "hidden";
+			}
+
+			function ccd() {
+				var h = document.getElementById("CC").value;
+				var i = document.getElementById("ccnum");
+				var j = h.toString();
+				i.style.fontSize = "30px";
+				i.style.padding = "10px";
+				if (i.innerHtml == "") {
+					i.innerHTML = "XXXX &emsp;&emsp;&emsp;XXXX&emsp;&emsp;&emsp;XXXX";
+				} else {
+					i.innerHTML = " " + j;
+				}
+			}
+
+			function ccexp() {
+				var h = document.getElementById("Exp").value;
+				var i = document.getElementById("ccexp");
+				var j = h.toString().toUpperCase();
+				i.innerHTML = j;
+			}
+
+			function ccfname() {
+				var h = document.getElementById("Fname").value;
+				var i = document.getElementById("ccfname");
+				var j = h.toString().toUpperCase();
+				i.style.fontSize = "20px";
+				i.innerHTML = j;
+			}
+		</script>
+		<script
+			src="https://kit.fontawesome.com/9bb7be2199.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

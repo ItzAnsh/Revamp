@@ -1,0 +1,88 @@
+@font-face {
+	font-family: Pushter;
+	src: url(../Fonts/Pushster/Pushster-Regular.ttf);
+}
+
+@font-face {
+	font-family: Cairo;
+	src: url(../fonts/Cairo/Cairo-VariableFont_wght.ttf);
+}
+
+.teal {
+	background-color: #2b6777;
+	height: 100vh;
+}
+
+.a {
+	font-family: Pushter;
+	text-align: right;
+	font-size: 50px;
+	color: white;
+	word-spacing: 70px;
+}
+
+#a {
+	color: #2b6777;
+	font-family: Pushter;
+	font-size: 50px;
+}
+
+#b {
+	color: #2b6777;
+	font-family: Pushter;
+	font-size: 50px;
+}
+
+.b {
+	color: white;
+	margin-left: 10%;
+	margin-top: 10%;
+	margin-right: 20%;
+	padding: 30px;
+	background-color: white;
+}
+
+.c {
+	font-size: 20px;
+	font-family: Cairo;
+}
+
+.d {
+	color: black;
+}
+
+.e {
+	width: 50%;
+}
+
+.f {
+	color: black;
+	font-family: Pushter;
+	font-size: 40px;
+}
+
+.g {
+	background-color: #fff;
+}
+
+.h {
+	background-color: #2b6777;
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.i {
+	color: #fff;
+	font-family: Pushter;
+	font-size: 40px;
+}
+
+.j {
+	background-color: #fff;
+}
+
+.link {
+	font-size: 16px;
+	color: black;
+}

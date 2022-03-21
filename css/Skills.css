@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One");
+@import url("https://fonts.googleapis.com/css?family=Exo+2");
+
+@font-face {
+	font-family: Raleway;
+	src: url(../Fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Fjalla One", sans-serif;
+	background: linear-gradient(#fff, #fefefe, #eaeaea);
+	animation: opac 0.75s;
+}
+.accordion {
+	background: rgba(0, 0, 0, 0.1);
+	height: 100vh;
+	display: flex;
+	box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+	flex-direction: row;
+	cursor: pointer;
+}
+.box {
+	position: relative;
+	height: 100vh;
+	flex: 1;
+	background-position: left;
+	background-size: 90vw 100vh;
+	transition: 0.7s;
+	box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+	background-color: #000;
+}
+.box:hover {
+	flex: 60;
+	background-size: 90vw;
+}
+
+.a1 {
+	background-image: url("../media/work.jpg");
+	background-size: 75vw;
+	background-color: #000;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.a2 {
+	background-image: url("../media/4.jpg");
+	background-size: 75vw;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.a3 {
+	background-image: url("../media/5.jpg");
+	background-size: 75vw;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.a4 {
+	background-image: url("../media/6.jpg");
+	background-size: 75vw;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.a5 {
+	background-image: url("../media/7.jpg");
+	background-size: 75vw;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.a6 {
+	background-image: url("../media/pic.jpg");
+	background-size: 75vw;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.a7 {
+	background-image: url("../media/pexels-fauxels-3183150.jpg");
+	background-size: 75vw;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.a8 {
+	background-image: url(../media/Ps.jpeg);
+	background-size: 75vw;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.a9 {
+	font-family: Raleway;
+	font-size: 64px;
+}
+
+p {
+	font-weight: normal;
+	font-family: "Exo 2", sans-serif;
+}
+
+.text {
+	position: absolute;
+	bottom: 0;
+	opacity: 0;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.418);
+}
+
+.abc {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box:hover .text {
+	opacity: 1;
+}
+
+h1 {
+	text-align: center;
+	margin: 100px auto 20px auto;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		margin: 0;
+	}
+	.accordion {
+		flex-direction: column;
+		box-shadow: none;
+	}
+	.box {
+		box-shadow: none;
+	}
+	.box:hover {
+		flex: 7;
+	}
+}
+
+@keyframes opac {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

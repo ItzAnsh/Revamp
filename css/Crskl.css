@@ -1,0 +1,110 @@
+@font-face {
+	font-family: Changa;
+	src: url(../Fonts/Changa/Changa-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-family: Raleway;
+	src: url(../Fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-family: Cairo;
+	src: url(../Fonts/Cairo/Cairo-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-family: Spartan;
+	src: url(../Fonts/Spartan/Spartan-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-family: Caveat;
+	src: url(../Fonts/Caveat/Caveat-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-family: Anton;
+	src: url(../Fonts/Anton/Anton-Regular.ttf);
+}
+
+body {
+	background-color: #1a1a1d;
+}
+
+.a {
+	font-size: 90px;
+	font-family: Changa;
+	color: #c3073f;
+}
+
+.b {
+	background-color: #1a1a1d;
+	height: 100vh;
+}
+
+.c {
+	color: #950740;
+}
+
+.d {
+	color: #950740;
+	font-size: 40px;
+	margin-left: 5vw;
+	font-family: Raleway;
+	line-height: 70px;
+}
+
+.e {
+	height: 103vh;
+	background-color: #1f2833;
+}
+
+.f {
+	color: #66fcf1;
+	font-size: 65px;
+	font-family: Spartan;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff,
+		0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 130px #0ff;
+}
+
+.g {
+	color: #0ff;
+	font-size: 35px;
+	font-family: Caveat;
+	line-height: 70px;
+}
+
+.h {
+	height: 100vh;
+	background-color: #e3e2df;
+}
+
+.i {
+	font-size: 70px;
+	color: #ee4c7c;
+	font-family: Anton;
+}
+
+.k {
+	color: #c3073f;
+}
+
+ol {
+	font-family: sans-serif;
+	font-size: 20px;
+	color: black;
+	font-weight: 600;
+}
+
+.vid {
+	width: 40vw;
+	height: 75vh;
+	margin-left: 9vw;
+}
+
+@media only screen and (max-width: 989px) {
+	.vid {
+		visibility: hidden;
+	}
+}
