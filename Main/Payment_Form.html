@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- CSS only -->
+		<link rel="stylesheet" href="../Bootstrap v5.1/css/bootstrap.css" />
+		<style>
+			body {
+				background-color: whitesmoke;
+			}
+
+			.a {
+				position: absolute;
+				margin: 4%;
+				margin-top: 0%;
+				visibility: hidden;
+			}
+
+			.b {
+				background-color: rgba(207, 203, 203, 0.952);
+			}
+
+			.c {
+				width: 50%;
+				border: none;
+				color: rgb(255, 193, 7);
+				background-color: black;
+			}
+
+			.c:hover {
+				background-color: rgb(255, 193, 7);
+				color: white;
+				transition: color 0.8s;
+				transition: background-color 0.5s;
+			}
+
+			.d {
+				color: blueviolet;
+			}
+
+			.e {
+				border: none;
+			}
+
+			.button {
+				border-radius: 20px;
+				padding: 20px;
+			}
+
+			.f {
+				border: 0;
+				width: 50%;
+				background-color: black;
+				color: rgb(255, 193, 7);
+			}
+
+			.fa-credit-card {
+				color: rgb(255, 193, 7);
+			}
+
+			.f:hover {
+				background-color: #253b80;
+				color: #2997d8;
+				transition: color 0.5s;
+				transition: background-color 0.8s;
+			}
+
+			.g {
+				border: none;
+				width: 50%;
+				background-color: black;
+				color: rgb(255, 193, 7);
+			}
+
+			.g:hover {
+				background-color: rgba(125, 182, 39, 0.781);
+				color: white;
+				transition: color 0.5s;
+				transition: background-color 0.8s;
+			}
+
+			.h {
+				position: absolute;
+				margin: 4%;
+				margin-top: 0%;
+				visibility: hidden;
+			}
+
+			.i {
+				letter-spacing: 4px;
+			}
+
+			.j {
+				border: none;
+				width: 50%;
+				background-color: black;
+				color: rgb(255, 193, 7);
+			}
+
+			.j:hover {
+				background-color: #c3073f;
+				color: white;
+				transition: color 0.5s;
+				transition: background-color 0.8s;
+			}
+
+			.button:hover {
+				background-color: blueviolet;
+				color: white;
+				transition: color 0.5s;
+				transition: background-color 0.8s;
+			}
+
+			.pay {
+				color: #2997d8;
+			}
+
+			#paypal {
+				visibility: hidden;
+				position: absolute;
+				margin-left: 5%;
+			}
+
+			label {
+				cursor: pointer;
+			}
+
+			table {
+				line-height: 50px;
+			}
+
+			#Net {
+				visibility: hidden;
+			}
+
+			@keyframes opac {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body class="">
+		<h1 class="display-1 text-center d">Payment Form</h1>
+		<div class="btn-group m-5 container">
+			<button class="btn button btn-lg" onclick="vis1()">
+				<i class="fab fa-cc-visa"></i> Credit Card
+			</button>
+			<button class="btn button btn-lg" onclick="vis2()">
+				<i class="fab fa-paypal"></i> PayPal
+			</button>
+			<button class="btn button btn-lg" onclick="vis3()">
+				<i class="fas fa-globe"></i> Net Banking
+			</button>
+			<button class="btn button btn-md" onclick="vis4()">
+				<i class="fas fa-dollar-sign"></i> Cashapp
+			</button>
+			<button class="btn button btn-md">
+				<i class="fab fa-ethereum"></i> Crypto Currency
+			</button>
+		</div>
+		<div class="bg-light container shadow-lg rounded p-4 a" id="cc">
+			<div class="row">
+				<i class="fas fa-credit-card fa-4x ms-5"></i>
+				<form action="" method="get">
+					<table class="table text-center">
+						<tr>
+							<td>
+								<label for="Fname" class="">First Name</label>
+							</td>
+							<td>
+								<input
+									type="text"
+									name="Fname"
+									id="Fname"
+									class="shadow-lg rounded p-1 ps-4 container e"
+									placeholder="Ansh"
+								/>
+							</td>
+						</tr>
+						<br />
+						<tr>
+							<td>
+								<label for="Lname" class="">Last Name</label>
+							</td>
+							<td>
+								<input
+									type="text"
+									name="Lname"
+									class="rounded shadow-lg container p-1 ps-4 e"
+									id="Lname"
+									placeholder="Bhasin"
+								/>
+							</td>
+						</tr>
+						<br />
+						<tr>
+							<td>
+								<label for="CC">Credit Card</label>
+							</td>
+							<td>
+								<input
+									type="number"
+									name="CC"
+									id="CC"
+									class="rounded shadow-lg container p-1 ps-4 e"
+									placeholder="1234-5678-9012"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="CVV">CVV</label></td>
+							<td>
+								<input
+									type="number"
+									name="CVV"
+									id="CVV"
+									class="rounded shadow-lg container p-1 ps-4 e"
+									placeholder="123"
+									aria-valuemax="12"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="Exp">Expiration Date</label></td>
+							<td>
+								<input
+									type="date"
+									name="Exp"
+									id="Exp"
+									class="rounded shadow-lg container p-1 ps-4 e"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="PS">Postal Code</label></td>
+							<td>
+								<input
+									type="number"
+									name="PS"
+									id="PS"
+									class="rounded shadow-lg container p-1 ps-4 e"
+									placeholder="160047"
+								/>
+							</td>
+						</tr>
+					</table>
+					<div class="text-center">
+						<input
+							type="submit"
+							value="Pay Now!"
+							class="fw-bold p-3 rounded-pill c shadow-lg"
+						/>
+					</div>
+					<br />
+				</form>
+			</div>
+		</div>
+		<div class="bg-light container shadow-lg rounded p-4 z" id="paypal">
+			<div class="row">
+				<form action="" method="get">
+					<i class="fab fa-cc-paypal fa-4x pay ms-5"></i>
+					<table class="table text-center">
+						<tr>
+							<td>Full name</td>
+							<td>
+								<input
+									type="text"
+									name=""
+									id=""
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="Ansh Bhasin"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td>
+								<input
+									type="email"
+									name=""
+									id=""
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="ansh2018.be21@chitkara.edu.in"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td>
+								<input
+									type="password"
+									name=""
+									id=""
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="Fill 8 letters including numbers, uppercase, lowercase and no symbols"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input
+									type="submit"
+									value="Pay Now!"
+									class="fw-bold p-3 rounded-pill f shadow-lg"
+								/>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div class="bg-light container shadow-lg rounded p-4 h" id="Net">
+			<i class="fas fa-receipt fa-4x ms-5"></i>
+			<div class="row">
+				<form action="" method="get">
+					<table class="table text-center">
+						<tr>
+							<td><label for="fname2">First Name</label></td>
+							<td>
+								<input
+									type="text"
+									name=""
+									id="fname2"
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="Ansh"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="lname2">Last Name</label></td>
+							<td>
+								<input
+									type="text"
+									name="lname2"
+									id="lname2"
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="Bhasin"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="Acc">Account Number</label></td>
+							<td>
+								<input
+									type="number"
+									name="Acc"
+									id="Acc"
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="1234567890"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="">PIN</label></td>
+							<td>
+								<input
+									type="number"
+									name="pin"
+									id="pin"
+									class="rounded container ps-4 shadow-lg e"
+									placeholder="1234"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input
+									type="submit"
+									value="Pay Now!"
+									class="fw-bold p-3 rounded-pill shadow-lg g"
+								/>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div class="bg-light container shadow-lg rounded p-4 h" id="Cashapp">
+			<div class="row">
+				<form action="" method="get">
+					<table class="table text-center">
+						<tr>
+							<td>
+								<label for="Number">Phone Number</label>
+							</td>
+							<td>
+								<input
+									type="number"
+									name=""
+									id=""
+									class="rounded container ps-4 shadow-lg e i"
+									placeholder="1234567890"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input
+									type="submit"
+									value="Pay Now!"
+									class="fw-bold p-3 rounded-pill shadow-lg j"
+								/>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<script>
+			var a = document.getElementById("a").value;
+			var b = document.getElementById("b").value;
+			var c = document.getElementById("c").value;
+			function vis1() {
+				var d = document.getElementById("cc");
+				var e = document.getElementById("paypal");
+				var f = document.getElementById("Net");
+				var g = document.getElementById("Cashapp");
+				g.style.visibility = "hidden";
+				d.style.visibility = "visible";
+				d.style.animation = "opac 1s";
+				e.style.visibility = "hidden";
+				f.style.visibility = "hidden";
+			}
+			function vis2() {
+				var e = document.getElementById("paypal");
+				var d = document.getElementById("cc");
+				var f = document.getElementById("Net");
+				var g = document.getElementById("Cashapp");
+				g.style.visibility = "hidden";
+				e.style.visibility = "visible";
+				e.style.animation = "opac 1s";
+				d.style.visibility = "hidden";
+				f.style.visibility = "hidden";
+			}
+			function vis3() {
+				var f = document.getElementById("Net");
+				var d = document.getElementById("paypal");
+				var e = document.getElementById("cc");
+				var g = document.getElementById("Cashapp");
+				g.style.visibility = "hidden";
+				f.style.visibility = "visible";
+				f.style.animation = "opac 1s";
+				d.style.visibility = "hidden";
+				e.style.visibility = "hidden";
+			}
+
+			function vis4() {
+				var g = document.getElementById("Cashapp");
+				var f = document.getElementById("Net");
+				var d = document.getElementById("paypal");
+				var e = document.getElementById("cc");
+				f.style.visibility = "hidden";
+				g.style.visibility = "visible";
+				g.style.animation = "opac 1s";
+				d.style.visibility = "hidden";
+				e.style.visibility = "hidden";
+			}
+		</script>
+		<script
+			src="https://kit.fontawesome.com/9bb7be2199.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
