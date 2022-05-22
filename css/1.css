@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Roboto+Mono:wght@100&display=swap");
+
+div.aa {
+	/*1st DIV*/
+	height: 110vh;
+	color: #001;
+	padding: 40px;
+	text-decoration: none;
+	background-color: black;
+}
+
+.a {
+	position: relative;
+	top: 47%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	margin: -100px 0 0 -100px;
+}
+
+.a {
+	/*ICON TROPHY*/
+	color: rgb(204, 255, 0);
+	float: left;
+	align-items: center;
+	opacity: 0.5;
+	top: 80%;
+}
+
+.b {
+	/*Buttons Div*/
+	background-color: rgba(98, 159, 177, 0.99);
+	color: rgb(204, 255, 0);
+	font-family: sans-serif;
+	font-size: 20px;
+	height: 110vh;
+}
+
+.d {
+	/*Get Everything in Center*/
+	/*REVAMP text at top styling*/
+	color: rgb(204, 255, 0);
+	font-family: "Manrope";
+
+	font-size: 100px;
+	text-decoration: none;
+	text-align: center;
+	position: relative;
+	top: 28%;
+	left: 42%;
+	width: 200px;
+	height: 200px;
+	margin: -100px 0 0 -100px;
+}
+
+.e {
+	border-radius: 20px;
+	float: left;
+	background-color: rgba(98, 159, 177, 0.99);
+	padding: 20px;
+	color: #fff;
+	font-size: 1em;
+}
+
+.e:hover {
+	background-color: black;
+	color: rgb(204, 255, 0);
+}
+
+.f {
+	top: 50%;
+	left: 40%;
+	position: relative;
+	background-color: #fff;
+	color: #000;
+	border-radius: 20px;
+	float: left;
+	padding: 20px;
+	font-size: 1em;
+}
+
+.f:hover {
+	background-color: black;
+	color: rgb(204, 255, 0);
+	animation: bg-color-button 0.3s;
+}
+
+.g {
+	height: 110vh;
+	background-color: rgba(203, 151, 161, 0.99);
+}
+
+.img {
+	height: 95vh;
+}
+
+.h {
+	color: rgb(204, 255, 0);
+	font-family: "Fuzzy Bubbles";
+}
+
+.i {
+	position: relative;
+	color: rgb(204, 255, 0);
+	top: 20%;
+	left: 70%;
+	opacity: 0.2;
+}
+
+/*SPIN ICONS FOR COGS*/
+.j {
+	position: relative;
+	color: rgb(204, 255, 0);
+	opacity: 0.2;
+	left: 10%;
+	bottom: 20%;
+}
+
+.l {
+	position: relative;
+	color: rgb(204, 255, 0);
+	opacity: 0.2;
+	left: 9.3%;
+}
+
+.m {
+	position: absolute;
+	left: 33.3%;
+	color: rgb(204, 255, 0);
+	opacity: 0.2;
+	top: 28.4%;
+}
+/*End for Cogs*/
+
+.n {
+	background-color: black;
+}
+
+.o {
+	color: rgb(204, 255, 0);
+	font-family: "Roboto mono";
+	font-weight: bold;
+	font-size: 30px;
+	text-decoration: none;
+	border: 3px solid rgb(204, 255, 0);
+	border-radius: 50%;
+}
+
+.o:hover {
+	color: rgb(204, 255, 0);
+	text-decoration: none;
+}
+
+.p {
+	background-color: rgb(204, 255, 0);
+	position: -webkit-sticky;
+	top: 0px;
+}
+
+.r {
+	color: black;
+	text-decoration: none;
+	font-family: "Roboto mono";
+}
+
+@keyframes bg-color-button {
+	from {
+		background-color: #fff;
+	}
+	to {
+		background-color: #000;
+		color: rgb(204, 255, 0);
+	}
+}
+
+@keyframes bg-color-nav {
+	from {
+		background-color: black;
+		top: -20%;
+	}
+	to {
+		background-color: rgb(204, 255, 0);
+		top: 20%;
+	}
+}
+
+@media only screen and (max-width: 1500px) {
+	.j {
+		top: 0%;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.img {
+		width: 20%;
+		height: 20%;
+		visibility: hidden;
+	}
+}
