@@ -4,197 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title></title>
+		<title> </title>
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link rel="stylesheet" href="../Bootstrap v5.1/css/bootstrap.css" />
-		<link rel="stylesheet" href="../css/1.css" />
-		<style>
-						.gridBlock {
-			  opacity: 0;
-			}
-
-
-			/* Grid almost fully pulled from https://www.rino-pelle.com/ */
-			.grid-container {
-			  width: 100vw;
-			  height: 400vh;
-			  position: relative;
-			}
-			.grid {
-			  top: 0;
-			  left: 0;
-			  z-index: 1;
-			  width: 70vw;
-			  height: 60vw;
-			  margin: 0 calc(100vw / 20 * 3);
-			  position: absolute;
-
-			}
-			@media only screen and (max-width: 580px) {
-			  .grid {
-			    margin: 0;
-			    width: 100vw;
-			    height: 89.444vw;
-			  }
-			}
-			.gridBlock {
-			  background-size: cover;
-			  background-color: darkgray;
-			}
-			.gridLayer {
-			  top: 0;
-			  left: 0;
-			  width: 100%;
-			  height: 100%;
-			  position: absolute;
-			  will-change: transform;
-			  transform-origin: 44.951% 50%;
-			}
-			.gridLayer:nth-child(1) .gridBlock {
-			  top: 5vw;
-			  left: 20vw;
-			  width: 10vw;
-			  height: 10vw;
-			}
-			@media only screen and (max-width: 580px) {
-			  .gridLayer:nth-child(1) .gridBlock {
-			    top: 11.111vw;
-			    left: 23.889vw;
-			    width: 15vw;
-			    height: 15vw;
-			  }
-			}
-			.gridLayer:nth-child(2) .gridBlock {
-			  top: 0;
-			  left: 32.5vw;
-			  width: 15vw;
-			  height: 15vw;
-			}
-			@media only screen and (max-width: 580px) {
-			  .gridLayer:nth-child(2) .gridBlock {
-			    top: 0;
-			    left: 43.333vw;
-			    width: 26.389vw;
-			    height: 26.389vw;
-			  }
-			}
-			.gridLayer:nth-child(3) .gridBlock {
-			  left: 0;
-			  top: 25vw;
-			  width: 15vw;
-			  height: 15vw;
-			}
-			@media only screen and (max-width: 580px) {
-			  .gridLayer:nth-child(3) .gridBlock {
-			    top: 30.278vw;
-			    left: 0;
-			    width: 26.389vw;
-			    height: 26.389vw;
-			  }
-			}
-			.gridLayer:nth-child(4) .gridBlock {
-			  top: 17.5vw;
-			  left: 17.5vw;
-			  width: 30vw;
-			  height: 30vw;
-			}
-			@media only screen and (max-width: 580px) {
-			  .gridLayer:nth-child(4) .gridBlock {
-			    top: 30.278vw;
-			    left: 30.278vw;
-			    width: 39.444vw;
-			    height: 39.444vw;
-			  }
-			}
-			.gridLayer:nth-child(5) {
-			  z-index: 1;
-			}
-			.gridLayer:nth-child(5) .gridBlock {
-			  top: 20vw;
-			  left: 50vw;
-			  width: 5vw;
-			  height: 5vw;
-			}
-			@media only screen and (max-width: 580px) {
-			  .gridLayer:nth-child(5) .gridBlock {
-			    top: 23.889vw;
-			    left: 73.889vw;
-			    width: 15.278vw;
-			    height: 15.278vw;
-			  }
-			}
-			.gridLayer:nth-child(5) a {
-			  height: 100%;
-			  display: flex;
-			  align-items: center;
-			  justify-content: center;
-			}
-			.gridLayer:nth-child(5) svg {
-			  width: 1.75vw;
-			}
-			@media only screen and (max-width: 580px) {
-			  .gridLayer:nth-child(5) svg {
-			    width: 4.722vw;
-			  }
-			}
-			.gridLayer:nth-child(6) .gridBlock {
-			  left: 50vw;
-			  top: 27.5vw;
-			  width: 20vw;
-			  height: 20vw;
-			}
-			@media only screen and (max-width: 580px) {
-			  .gridLayer:nth-child(6) .gridBlock {
-			    top: 43.889vw;
-			    left: 73.889vw;
-			    width: 26.389vw;
-			    height: 26.389vw;
-			  }
-			}
-			.gridLayer:nth-child(7) .gridBlock {
-			  left: 10vw;
-			  top: 42.5vw;
-			  width: 5vw;
-			  height: 5vw;
-			}
-			@media only screen and (max-width: 580px) {
-			  .gridLayer:nth-child(7) .gridBlock {
-			    display: none;
-			  }
-			}
-			.gridLayer:nth-child(8) .gridBlock {
-			  bottom: 5vw;
-			  left: 42.5vw;
-			  width: 5vw;
-			  height: 5vw;
-			}
-			@media only screen and (max-width: 580px) {
-			  .gridLayer:nth-child(8) .gridBlock {
-			    display: none;
-			  }
-			}
-			.gridLayer:nth-child(9) .gridBlock {
-			  bottom: 0;
-			  left: 50vw;
-			  width: 10vw;
-			  height: 10vw;
-			}
-			@media only screen and (max-width: 580px) {
-			  .gridLayer:nth-child(9) .gridBlock {
-			    top: 73.889vw;
-			    left: 58.889vw;
-			    width: 15.278vw;
-			    height: 15.278vw;
-			  }
-			}
-			.gridBlock {
-			  display: block;
-			  position: absolute;
-			}
-
-
-						}
-		</style>
+		<link rel="stylesheet" href="../css/Index.css" />
 	</head>
 	<body id="body">
 		<div class="n p-4">
@@ -208,61 +21,102 @@
 			<i class="fas fa-cog fa-4x fa-spin fw l"></i>
 			<i class="fas fa-cog fa-4x fa-spin fw m"></i>
 		</div>
-		<h1 class="header-section">
-			Scroll down to see a photo gallery being revealed
-		</h1>
-
-		<div class="grid-container">
-			<div class="grid">
-				<div class="gridLayer">
-					<div class="gridBlock"></div>
-				</div>
-				<div class="gridLayer">
-					<div class="gridBlock"></div>
-				</div>
-				<div class="gridLayer">
-					<div class="gridBlock"></div>
-				</div>
-				<div class="gridLayer centerPiece">
-					<div class="gridBlock centerBlock"></div>
-				</div>
-				<div class="gridLayer">
-					<div class="gridBlock">
-						<a href="https://greensock.com" target="_blank"></a>
+		<div class="b p-5 container-fluid">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="btn-group" data-aos="fade-right" data-aos-duration="1100">
+						<button class="button btn e" onclick="text1()" type="button">
+							Personality Developement
+						</button>
+						<button class="button btn e" onclick="text2()" type="button">
+							Communication Skills
+						</button>
+						<button class="button btn e" onclick="text3()" type="button">
+							Physical Growth
+						</button>
 					</div>
+					<br /><br /><br />
+					<p id="a" data-aos="fade-right" data-aos-duration="1100">
+						Personality is what makes a person a unique person, and it is
+						recognizable soon after birth. A child's personality has several
+						components: temperament, environment, and character. Temperament is
+						the set of genetically determined traits that determine the child's
+						approach to the world and how the child learns about the world.
+						There are no genes that specify personality traits, but some genes
+						do control the development of the nervous system, which in turn
+						controls behavior.
+					</p>
+					<button
+						class="btn f rounded-pill"
+						data-aos="fade-up"
+						data-aos-duration="1100"
+						type="button"
+						onclick="window.location.href='Skills_menu.html'"
+					>
+						Learn More
+					</button>
 				</div>
-				<div class="gridLayer">
-					<div class="gridBlock"></div>
+				<div class="col-md-5">
+					<img
+						src="../media/GROW.png"
+						class="img rounded p-5"
+						alt="..."
+						data-aos="fade-left"
+						data-aos-duration="1100"
+					/>
 				</div>
-				<div class="gridLayer">
-					<div class="gridBlock"></div>
-				</div>
-				<div class="gridLayer">
-					<div class="gridBlock"></div>
-				</div>
-				<div class="gridLayer">
-					<div class="gridBlock"></div>
-				</div>
+				<br /><br /><br />
 			</div>
 		</div>
 
-		<h1 class="header-section" style="margin-top: 0">
-			Some additional content
-		</h1>
-
-		<header>
-			<a href="https://greensock.com/scrolltrigger">
-				<img
-					class="greensock-icon"
-					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/scroll-trigger-logo-light.svg"
-					width="200"
-					height="64"
-				/>
-			</a>
-		</header>
-
+		<div class="g p-5 container-fluid">
+			<div class="row">
+				<div class="col-md-5">
+					<img
+						src="../media/colors.png"
+						alt=""
+						class="img-fluid rounded p-5 img"
+						data-aos="fade-right"
+						data-aos-duration="1400"
+					/>
+				</div>
+				<div class="col-lg-7">
+					<h1
+						class="m-4 p-4 display-1 h"
+						data-aos="zoom-in"
+						data-aos-duration="1100"
+					>
+						Revamp
+					</h1>
+					<p class="h m-2 p-5" data-aos="zoom-out" data-aos-duration="1100">
+						In daily life the term personality is very freely used by people
+						with different meanings. Some people refer to the physical
+						appearance like height, weight, colour, body built, dress, voice,
+						etc. Some other people refer to intellectual qualities like
+						intelligence, activeness, way of speech, thinking and reasoning
+						abilities, etc. <br /><br />
+						The term personality has been derived from a Latin word ‘persona’-
+						means ‘mask’. In olden days, while playing dramas, in order to give
+						good effects to the roles played by them, the Greek actors used to
+						wear masks. <br /><br />Revamp is a software which helps people have
+						growth not only personality but all the other important aspects
+						according to one's needs.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="photochanger">
+			<section class="comparisonSection">
+				<div class="comparisonImage beforeImage">
+					<img src="../media/Sad.png" alt="before" />
+				</div>
+				<div class="comparisonImage afterImage">
+					<img src="../media/tux.jpeg" alt="after" id="abc" />
+				</div>
+			</section>
+		</div>
 		<script
-			src="https://kit.fontawesome.com/9bb7be2199.js"
+			src="https://kit.fontawesome.com/1e8b867bb1.js"
 			crossorigin="anonymous"
 		></script>
 		<script
@@ -274,44 +128,36 @@
 		<script>
 			AOS.init();
 		</script>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+		<script src="../js/1.js"></script>
 		<script>
-			gsap
-				.timeline({
+			gsap.utils.toArray(".comparisonSection").forEach((section) => {
+				let tl = gsap.timeline({
 					scrollTrigger: {
-						trigger: ".grid-container",
-						start: "top top",
-						end: () => innerHeight * 4,
+						trigger: section,
+						start: "center center",
+						// makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
+						end: () => "+=" + section.offsetWidth,
 						scrub: true,
-						pin: ".grid",
+						pin: true,
 						anticipatePin: 1,
 					},
-				})
-				.set(".gridBlock:not(.centerBlock)", { autoAlpha: 0 })
-				.to(
-					".gridBlock:not(.centerBlock)",
-					{ duration: 0.1, autoAlpha: 1 },
-					0.001
-				)
-				.from(".gridLayer", {
-					scale: 3.3333,
-					ease: "none",
+					defaults: { ease: "none" },
 				});
-
-			// Images to make it look better, not related to the effect
-			const size = Math.max(innerWidth, innerHeight);
-			gsap.set(".gridBlock", {
-				backgroundImage: (i) =>
-					`url(https://picsum.photos/${size}/${size}?random=${i})`,
+				// animate the container one way...
+				tl.fromTo(
+					section.querySelector(".afterImage"),
+					{ xPercent: 100, x: 0 },
+					{ xPercent: 0 }
+				).fromTo(
+					section.querySelector(".afterImage img"),
+					{ xPercent: -100, x: 0 },
+					{ xPercent: 0 },
+					0
+				);
 			});
-
-			const bigImg = new Image();
-			bigImg.addEventListener("load", function () {
-				gsap.to(".centerPiece .gridBlock", { autoAlpha: 1, duration: 0.5 });
-			});
-
-			bigImg.src = `https://picsum.photos/${size}/${size}?random=50`;
 		</script>
 	</body>
 </html>
